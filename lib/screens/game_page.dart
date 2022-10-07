@@ -216,7 +216,8 @@ class _GamePageState extends State<GamePage> {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.of(context).pushReplacementNamed("/");
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil("/", (route) => false);
                 },
                 child: Icon(Icons.home, color: Colors.brown.shade700),
               ),
